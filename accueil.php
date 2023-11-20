@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+<?php
+require_once "includes/head.php" ?>
 
 <body>
   <!-- DEBUT HEADER -->
@@ -20,10 +10,10 @@
       </div>
       <nav class="nav-fixe">
         <ul class="liste-header-fixe">
-          <li class="li-header-fixe"><a class="link-header" href="accueil.html">ACCUEIL</a></li>
-          <li class="li-header-fixe"><a class="link-header" href="Html/enregistrer.html">S'ENREGISTRER</a>
+          <li class="li-header-fixe"><a class="link-header" href="accueil.php">ACCUEIL</a></li>
+          <li class="li-header-fixe"><a class="link-header" href="views/enregistrer.php">S'ENREGISTRER</a>
           </li>
-          <li class="li-header-fixe"><a class="link-header" href="Html/connexion.html">CONNEXION</a></li>
+          <li class="li-header-fixe"><a class="link-header" href="views/connexion.php">CONNEXION</a></li>
         </ul>
       </nav>
       <div class="reso">
@@ -40,13 +30,13 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="accueil.html">ACCUEIL</a>
+            <a class="nav-link active" aria-current="page" href="accueil.php">ACCUEIL</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Html/enregistrer.html">S'ENREGISTRER</a>
+            <a class="nav-link" href="views/enregistrer.php">S'ENREGISTRER</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Html/connexion.html">CONNEXION</a>
+            <a class="nav-link" href="views/connexion.php">CONNEXION</a>
           </li>
         </ul>
       </div>
@@ -62,11 +52,11 @@
     <div class="botAccueil">
       <div class="fullBtn1">
         <p class="textBotAccueil">Cliquez sur le bouton ci-dessous pour vous enregistrer.</p>
-        <a href="Html/enregistrer.html"><input type="button" value="S'ENREGISTRER" class="btn1"></a>
+        <a href="views/enregistrer.php"><input type="button" value="S'ENREGISTRER" class="btn1"></a>
       </div>
       <div class="fullBtn2">
         <p class="textBotAccueil">Cliquez sur le bouton ci-dessous pour vous connecter.</p>
-        <a href="Html/connexion.html"><input type="button" value="CONNEXION" class="btn2"></a>
+        <a href="views/connexion.php"><input type="button" value="CONNEXION" class="btn2"></a>
       </div>
     </div>
   </main>
@@ -77,16 +67,16 @@
         <a href="accueil.html"><img src="image/logoFooter.png" alt="logoFooter" class="logoFooter"></a>
       </div>
       <nav class="navResp">
-        <a href="accueil.html" class="linkNav">ACCUEIL</a>
-        <a href="Html/enregistrer.html" class="linkNav">S'ENREGISTRER</a>
-        <a href="Html/connexion.html" class="linkNav">CONNEXION</a>
+        <a href="accueil.php" class="linkNav">ACCUEIL</a>
+        <a href="views/enregistrer.php" class="linkNav">S'ENREGISTRER</a>
+        <a href="views/connexion.php" class="linkNav">CONNEXION</a>
       </nav>
     </div>
     <div class="copy">&copy; copyright, Kevin Carcel</div>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
   <script src="Javascript/script.js"></script>
 </body>
 
