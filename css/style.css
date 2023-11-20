@@ -1,0 +1,614 @@
+/* HEADER */
+.header1{
+  width: auto;
+}
+.header-fixe{
+  height: 280px;
+  background-image:url(../image/bgHeader.png);
+  filter: grayscale(50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logoHeader{
+  height: 200px;
+}
+.nav-fixe{
+  display: flex;
+  flex-direction: row;
+}
+.liste-header-fixe{
+  display: flex;
+  gap: 15%;
+}
+.link-header{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  border: dashed white 2px;
+  padding: 5px;
+  font-weight: bold;
+}
+.linkNav{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  border: dashed white 2px;
+  padding: 5px;
+  font-weight: bold;
+}
+.link-header:hover{
+  color: black;
+  background-color: white;
+  border: solid black 2px;
+}
+.linkNav:hover{
+  color: black;
+  background-color: white;
+  border: solid black 2px;
+}
+.reso{
+  display: flex;
+  gap: 20%;
+}
+.logoReso{
+  width: 40px;
+}
+
+/* FOOTER */
+.fullFooter{
+  width: 100%;
+  height: 280px;
+  background-image:url(../image/bgHeader.png);
+  filter: grayscale(50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.logoFooter{
+  height: 160px;
+}
+.copy{
+  background-color: black;
+  color: white;
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.navResp{
+  display: flex;
+  gap: 10%;
+}
+
+/* ACCUEIL */
+
+.mainAccueil{
+  background-image: url(../image/bgHeader.png);
+  width: 100%;
+}
+.topAccueil{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-size: 40px;
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  color: white;
+  border-radius: 10%;
+  margin-top: 40px;
+}
+.textTopAccueil{
+  font-weight: lighter;
+  margin-top: 40px;
+  margin-left: 30%;
+  margin-right: 30%;
+  color: white;
+}
+.botAccueil{
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.fullBtn1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(135, 19, 19);
+  border: ridge black 10px;
+  padding: 20px;
+  color: white;
+  gap: 15px;
+}
+.btn1{
+  color:rgb(135, 19, 19) ;
+  font-weight: bold;
+  border: solid 2px black;
+  padding: 10px;
+}
+.btn1:hover{
+color: white;
+background-color:rgb(135, 19, 19) ;
+border: solid 2px white;
+}
+.btn2{
+  color: white;
+  background-color:rgb(135, 19, 19) ;
+  border: solid 2px white;
+  padding: 10px;
+}
+.btn2:hover{
+  color:rgb(135, 19, 19) ;
+  font-weight: bold;
+  border: solid 2px black;
+  background-color: white;
+}
+.fullBtn2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: ridge black 10px;
+  padding: 20px;
+  gap: 15px;
+  color: rgb(135, 19, 19);
+}
+
+/* Page Enregistrer */
+form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 5%;
+  background-color: rgb(249, 246, 240);
+  border: ridge black 10px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.elem-form{
+  width: 70%;
+  align-self: center;
+  background-color: rgba(135, 19, 19, 0.699);
+  color: white;
+}
+.elem-form::placeholder{
+  color: black;
+}
+.titre{
+  display: flex;
+  justify-content: center;
+}
+label{
+  color: black;
+  align-self: center;
+  margin-bottom: 5px;
+}
+input{
+  margin-bottom: 14px;
+}
+.button{
+  color: white;
+  background-color:rgba(135, 19, 19, 0.699);
+  border: solid 2px white;
+  padding: 10px;
+  width: fit-content;
+  align-self: center;
+  font-weight: bold;
+}
+.button:hover{
+  color:rgb(135, 19, 19) ;
+  font-weight: bold;
+  border: solid 2px black;
+  background-color: white;
+}
+#erreur1 , #erreur2 , #erreur3 , #erreur4 , #erreur5 , #erreurCo1 , #erreurCo2{
+  text-align: center;
+}
+.mainEnregistrer{
+  background-image: url(../image/bgHeader.png);
+  padding-bottom: 80px;
+}
+.imgForm{
+  width: 200px;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+/* PAGE CONNEXION */
+
+.mainConnexion{
+  background-image: url(../image/bgHeader.png);
+  padding-bottom: 80px;
+}
+
+/* PAGE FORUM */
+.mainForum{
+  padding-bottom: 80px;
+}
+.fullForum{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+.box1{
+  text-align: center;
+  background-color: rgb(135, 19, 19);
+  color: white;
+  border-radius: 20%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+.box2{
+  text-align: center;
+  background-color: white;
+  border: 1px black solid;
+  color:rgb(135, 19, 19);
+  border-radius: 20%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+.box3{
+  text-align: center;
+  background-color: rgb(135, 19, 19);
+  color: white;
+  border-radius: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px grey;
+}
+.titreSujet{
+  font-size: 30px;
+  font-weight: bold;
+}
+.textSujet{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.goal{
+  border-radius: 50%;
+  padding: 20px;
+  color:rgb(135, 19, 19) ;
+  font-weight: bold;
+  border: 4px solid black;
+}
+.goal:hover{
+  background-color:rgb(206, 205, 205)
+}
+
+.goal2{
+  border-radius: 50%;
+  padding: 20px;
+  color:white ;
+  background-color:rgb(135, 19, 19) ;
+  font-weight: bold;
+  border: 4px solid black;
+}
+.goal2:hover{
+  background-color:rgb(185, 4, 4)
+}
+.imgForum{
+  width: 300px;
+  border-radius: 20%;
+}
+.centerImg{
+  display: flex;
+  justify-content: space-around;
+}
+.h1Modif{
+  color:rgb(135, 19, 19) ;
+  font-size: 40px;
+  border-top: 3px solid rgb(135, 19, 19);
+  border-bottom: 3px solid rgb(135, 19, 19);
+  border-radius: 10%;
+  margin-bottom: 80px;
+}
+.bonjour{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 5%;
+  margin-top: 20px;
+}
+.imgEtForum{
+  display: flex;
+  flex-direction: column;
+}
+
+/* PAGE SUJETS */
+.fullSujet{
+  display: flex;
+  justify-content: space-around;
+}
+.imgTablo{
+  width: 400px;
+}
+.fullTablo{
+  border-top: 2px solid rgb(135, 19, 19) ;
+  border-bottom: 2px solid rgb(135, 19, 19) ;
+  display: flex;
+  text-align: center;
+}
+th{
+  width: 250px;
+  border: 2px solid rgb(135, 19, 19);
+  padding: 5px;
+}
+td{
+  width: 250px;
+  border: 2px solid rgb(135, 19, 19);
+  padding: 5px;
+}
+.addSujet{
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.tableau{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.fieldAdd{
+  background-color: rgba(135, 19, 19, 0.37);
+  border: rgba(135, 19, 19, 0.37) groove 4px;
+  width: 75%;
+  align-self: center;
+}
+.fieldAdd::placeholder{
+  color: white;
+}
+.linkTab{
+  text-decoration: none;
+  color: black;
+}
+
+/* PAGE SUJET */
+#sujetName{
+  font-size: 26px;
+  color: rgb(135, 19, 19);
+  border-top: 3px solid rgb(135, 19, 19);
+  border-bottom: 3px solid rgb(135, 19, 19);
+  border-radius: 10%;
+  margin-bottom: 80px;
+}
+.fullBoxCom{
+  border: ridge 10px black;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15%;
+  margin-bottom: 40px;
+  background: linear-gradient(to right,rgb(209, 67, 67),rgb(135, 19, 19));
+  animation: gradientAnimation 5s linear infinite;
+  background-size: 200% 100%;
+}
+@keyframes gradientAnimation{
+  0%{
+    background-position: 0% 50%;
+  }
+  100%{
+    background-position: 100% 50%;
+  }
+}
+.titreComStyle{
+  font-size: 26px;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+.boxCom{
+  width: 70%;
+  height: 400px;
+  padding: 20px;
+  margin-bottom: 40px;
+  line-height: 1.25em;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(249, 240, 228);
+  box-shadow: 3px 3px 3px 3px rgb(116, 116, 116);
+}
+.red{
+  color:rgb(135, 19, 19);
+  font-weight: bold;
+}
+.ita{
+  font-style: italic;
+  color:rgb(135, 19, 19) ;
+}
+.addCom{
+  display: flex;
+  flex-direction: column;
+}
+.addComField{
+  width: 400px;
+  background-color: rgba(255, 255, 255, 0.37);
+  border: rgba(135, 19, 19, 0.37) groove 4px;
+}
+
+/* RESPONSIVE */
+/* BURGER */
+@media only screen and (min-width: 769px){
+.header2{
+  display: none;
+}
+}
+
+/* TABLETTE */
+@media only screen and (max-width: 768px){
+  /* HEADER */
+.header1{
+  display: none;
+}
+/* FOOTER */
+.fullFooter{
+  display: flex;
+  flex-direction: column;
+}
+.navResp{
+  display: flex;
+  gap: 2%;
+}
+/* ACCUEIL */
+body{
+  width: 100%;
+}
+.mainAccueil{
+  height: 750px
+}
+h1{
+  margin-top: 80px;
+}
+.textTopAccueil{
+  margin-top: 80px;
+}
+.botAccueil{
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+/* FIN ACCUEIL */
+/* ENREGISTRER */
+form{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+/* CONNEXION */
+.mainConnexion{
+  height: 700px;
+}
+/* FORUM */
+  .centerImg{
+    display: none;
+  }
+  .fullForum{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    gap: 50px;
+    font-size: 12px;
+  }
+  .box1 , .box2 , .box3{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    width: 500px;
+    gap: 3px;
+    align-self: center;
+  }
+  .goal , .goal2{
+  margin-top: 9px;
+  }
+  .textSujet{
+    align-self: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .titreSujet{
+    align-self: center;
+  }
+/* JOUEURS */
+th{
+  width: 150px;
+}
+td{
+  width: 150px;
+}
+.fullSujet{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+/* SUJETS JOUEURS */
+.fullBoxCom{
+  width: 100%;
+  margin-left: 0;
+}
+.boxCom{
+  width: 90%;
+  font-size: 12px;
+}
+.addComField{
+  width: 250px;
+}
+}
+/* FIN TABLETTE */
+
+
+
+
+
+
+
+
+/* MOBILE */
+@media only screen and (max-width: 600px){
+  /* HEADER */
+  .header1{
+    display: none;
+  }
+  /* FOOTER */
+.fullFooter{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.navResp{
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  text-align: center;
+}
+.linkNav{
+  border: none;
+}
+/* ACCUEIL */
+.mainAccueil{
+  height: 900px;
+}
+.botAccueil{
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.textTopAccueil{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* JOUEURS */
+.imgTablo{
+  width: 250px;
+}
+.bonjour{
+  font-size: 10px;
+}
+
+/* FORUM */
+.box1 , .box2 , .box3 {
+  width: 90%;
+}
+.titreSujet{
+  font-size: 20px;
+}
+}
+  
+
+
+
+

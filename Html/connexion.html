@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <!-- DEBUT HEADER -->
+  <header class="header1">
+    <div class="header-fixe">
+      <div class="imageHeader">
+        <a href="../accueil.html"><img src="../image/logo header.png " alt="logoHeader" class="logoHeader"></a>
+      </div>
+      <nav class="nav-fixe">
+        <ul class="liste-header-fixe">
+          <li class="li-header-fixe"><a class="link-header" href="../accueil.html">ACCUEIL</a></li>
+          <li class="li-header-fixe"><a class="link-header" href="../Html/enregistrer.html">S'ENREGISTRER</a>
+          </li>
+          <li class="li-header-fixe"><a class="link-header" href="../Html/connexion.html">CONNEXION</a></li>
+        </ul>
+      </nav>
+      <div class="reso">
+        <a href="#"><img src="../image/facebook.png" alt="facebook" class="logoReso"></a>
+        <a href="#"><img src="../image/instagram.png" alt="instagram" class="logoReso"></a>
+      </div>
+  </header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary header2">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../accueil.html">ACCUEIL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Html/enregistrer.html">S'ENREGISTRER</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../Html/connexion.html">CONNEXION</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <main class="mainConnexion">
+    <div class="titre">
+      <h1>SE CONNECTER</h1>
+    </div>
+
+    <form action="../Html/forum.html" id="formulaireConnexion" method="get">
+
+      <label for="mailCo">Votre identifiant (e-mail)</label>
+      <input type="text" name="mailCo" id="mailCo" class="elem-form" placeholder="SSavidan@gmail.fr">
+      <span id="erreurCo1"></span> <br>
+
+      <label for="mdpsCo">Votre mot de passe :</label>
+      <input type="text" name="mdpsCo" id="mdpsCo" class="elem-form" placeholder="********">
+      <span id="erreurCo2"></span><br>
+
+      <input type="submit" class="button" value="Se connecter" id="submit">
+
+    </form>
+
+  </main>
+  <footer>
+    <div class="fullFooter">
+      <div class="imgFooter">
+        <a href="../accueil.html"><img src="../image/logoFooter.png" alt="logoFooter" class="logoFooter"></a>
+      </div>
+      <nav class="navResp">
+        <a href="../accueil.html" class="linkNav">ACCUEIL</a>
+        <a href="../Html/enregistrer.html" class="linkNav">S'ENREGISTRER</a>
+        <a href="../Html/connexion.html" class="linkNav">CONNEXION</a>
+      </nav>
+    </div>
+    <div class="copy">&copy; copyright, Kevin Carcel</div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="../Javascript/scriptco.js"></script>
+</body>
+
+</html>
