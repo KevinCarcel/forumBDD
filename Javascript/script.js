@@ -17,7 +17,7 @@ formulaireEnregistrer.addEventListener('submit', function (e) {
     e.preventDefault("");
   } 
 
-  // regex nom
+  // // regex nom
   else if (regexNom.test(enreNom.value) == false) {
 
     let enreErreur1 = document.getElementById("erreur1");
@@ -149,3 +149,6 @@ formulaireEnregistrer.addEventListener('submit', function (e) {
   localStorage.setItem("mail",mailVal);
   localStorage.setItem("mdps",passwordVal);
 });
+
+
+

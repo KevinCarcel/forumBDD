@@ -219,6 +219,18 @@ input{
   margin-bottom: 40px;
   align-self: center;
 }
+#erreur{
+  text-align: center;
+  color: red;
+  font-style: italic;
+}
+#success{
+  text-align: center;
+  color: green;
+  font-style: italic ;
+  font-weight: bolder;
+  font-size: 20px;
+}
 
 /* PAGE CONNEXION */
 
