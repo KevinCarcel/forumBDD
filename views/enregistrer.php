@@ -13,7 +13,8 @@ require_once "../includes/head.php" ?>
       <h1>S'ENREGISTRER</h1>
     </div>
     <!-- Debut Form -->
-    <form action="../controller/enregistrer_controller.php" id="formulaireEnregistrer" method="POST">
+    <form action="../controller/enregistrer_controller.php" id="formulaireEnregistrer" method="POST"
+      enctype="multipart/form-data">
       <img src="../image/bg1.jpg" alt="bg1" class="imgForm">
       <?php
             if ($_SESSION['success'] == 1) {
@@ -73,6 +74,15 @@ require_once "../includes/head.php" ?>
           echo '<p id="erreur">Le mot de passe est différent !!!</p>';
       }
       ?><br><br>
+
+      <label for="photo">Votre photo de profil :</label>
+      <input type="file" name="photo" id="photo" class="elem-form">
+      <span id="erreur6" name="erreurPhoto"></span>
+      <?php
+        if ($_SESSION['erreur7'] == 1) {
+          echo '<p id="erreur">La photo est requise</p>';
+      }
+      ?>
 
 
 
