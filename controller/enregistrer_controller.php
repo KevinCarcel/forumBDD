@@ -17,6 +17,9 @@
         $regprenom = '/^[a-zA-Z]{3,}$/';
         $regmail=  '/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/';
         $regmdps= '/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#\+\-\^\[\]]).{8,}$/';
+    // Déplacez le fichier téléchargé vers le répertoire spécifié
+    $target_directory = "../image/photo/"; 
+    $target_file = $target_directory . basename($_FILES['photo']['name']);
     
    // voir si l'adresse mail existe déjà dans la base de donnée avec une requête préparée
     $mailExist = $con->prepare('SELECT * FROM utilisateur WHERE mail_User=?');
@@ -53,11 +56,8 @@
     } else if ($photo = '') {
         $_SESSION['erreur7'] = 1;
         header("Refresh:0; url= ../views/enregistrer.php");
-    // Déplacez le fichier téléchargé vers le répertoire spécifié
-    $target_directory = "../image/photo"; 
-    $target_file = $target_directory . basename($_FILES['photo']['name']);
     }
-     if(move_uploaded_file($_FILES['photo']['tmp_name'], $target_file)) {
+     if(move_uploaded_file($_FILES['photo']['tmp_name'],$target_file)) {
         // Fichier déplacé avec succès, procédez à l'insertion dans la base de données
         $req = $con->prepare("INSERT INTO utilisateur (nom_User,prenom_User,mail_User,mdp_User,lien_Image) VALUES (?,?,?,?,?)");
         $req->execute(array($nom, $prenom, $mail, $passHash,$target_file ));
