@@ -12,9 +12,9 @@ require_once "../includes/head.php" ?>
       <h1>SE CONNECTER</h1>
     </div>
 
-    <form action="../views/forum.php" id="formulaireConnexion" method="get">
+    <form action="../controller/connexion_controller.php" id="formulaireConnexion" method="POST">
       <?php
-            if ($_SESSION['success'] == 1) {
+            if ($_SESSION['success2'] == 1) {
                 echo '<p id="success">Tu es déja connecté</p>';
             }
       ?>
@@ -37,7 +37,7 @@ require_once "../includes/head.php" ?>
       }
       ?><br>
 
-      <input type="submit" class="button" value="Se connecter" id="submit">
+      <input type="submit" class="button" value="Se connecter" name="submit" id="submit">
       <input id="submit" class="button" type="submit" name="reset" value="Reset" />
 
     </form>

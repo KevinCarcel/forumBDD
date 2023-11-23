@@ -27,7 +27,7 @@
     $utilisateurMail = $mailExist->fetch();
 
     // hachage mot de passe
-    $passHash = password_hash($mdps, PASSWORD_DEFAULT);
+    $steak = password_hash($mdps, PASSWORD_BCRYPT);
     //verif nom
     if (!preg_match($regnom, $nom) || $nom == "") {
         $_SESSION['erreur1'] = 1;
@@ -60,7 +60,7 @@
      if(move_uploaded_file($_FILES['photo']['tmp_name'],$target_file)) {
         // Fichier déplacé avec succès, procédez à l'insertion dans la base de données
         $req = $con->prepare("INSERT INTO utilisateur (nom_User,prenom_User,mail_User,mdp_User,lien_Image) VALUES (?,?,?,?,?)");
-        $req->execute(array($nom, $prenom, $mail, $passHash,$target_file ));
+        $req->execute(array($nom, $prenom, $mail, $steak,$target_file ));
         $_SESSION['erreur1'] = 0;
         $_SESSION['erreur2'] = 0;
         $_SESSION['erreur3'] = 0;
