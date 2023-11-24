@@ -5,15 +5,43 @@ require_once "../includes/head.php" ?>
   <!-- DEBUT HEADER -->
   <?php
 require_once "../includes/header.php" ?>
+  <?php require_once "../controller/addsujet.php";?>
+  <?php require_once "../controller/forum_controller.php" ?>
 
 
   <main class="mainSujet">
     <main class="mainForum">
       <div class="bonjour">
-        <p id="bonjour1"></p>
-        <p id="bonjour2"></p>
-        <p id="bonjour3"></p>
+
+        <?php
+      echo "<p id='bonjour1'>$bjr1</p>";
+    ?>
+        <?php
+      $date = new DateTime();
+      $dateJour = "Nous sommes le ". $date->format("d/m/Y") ."";
+      $_SESSION["dateJour"] = $dateJour;
+    echo "<p id='bonjour2'>$dateJour</p>";
+    ?>
+
+        <?php
+      date_default_timezone_set("Europe/Paris");
+      $date = new DateTime();
+      $heureJour = "Vous vous êtes connectés à : ". $date->format("H:i:s") ."";
+      $_SESSION["heureJour"] = $heureJour;
+    echo "<p id='bonjour3'>$heureJour</p>";
+    ?>
       </div>
+      <form method="POST">
+        <input type="submit" name="deco" value="Deconnexion" class="button" id="deco"> <!-- Bouton de déconnexion -->
+      </form>
+      <?php
+  
+if (isset($_POST['deco'])) {
+    session_destroy();
+    header('location:../accueil.php');
+     
+}
+?>
       <div class="titre">
         <h1 class="h1Modif">JOUEURS</h1>
       </div>
@@ -30,16 +58,24 @@ require_once "../includes/header.php" ?>
               <th class="caseTablo">Auteur</th>
             </tr>
 
-            <tr>
-              <td><a href="../views/sujetJoueurs.php" class="linkTab">1</a></td>
-              <td>Nom Sujet</td>
-              <td><a href="../views/sujetJoueurs.php" class="linkTab">24/10/2023</a></td>
-              <td><a href="../views/sujetJoueurs.php" class="linkTab">Kévin</a></td>
-            </tr>
+            <?php
+     //boucles foreach pour afficher chaque ligne de la requete 
+     foreach($lignes as $ligne){
+      echo '<tr>
+      <td>'.$ligne['id_Sujet'].'</td>
+      <td>'.$ligne['nom_Sujet'].'</td>
+      <td>'.$ligne[$dateNow].'</td>
+      <td>'.$ligne['prenom_User '.'nom_User'].'</td>
+      <td><a href="addsujet.php? id='.$ligne['id_Sujet'].'"></a></td>
+    </tr>';
+     }
+    ?>
 
             <div class="addSujet">
-              <input type="text" class="fieldAdd" id="fieldAdd" placeholder="Ajoutez un sujet">
-              <input type="submit" value="Ajouter" id="submit" class="button">
+              <form action="../controller/addsujet.php" method="POST">
+                < <input type="text" class="fieldAdd" name="addSujet" id="fieldAdd" placeholder="Ajoutez un sujet">
+                  <input type="submit" value="Ajouter" id="submit" class="button">
+              </form>
             </div>
           </table>
         </div>

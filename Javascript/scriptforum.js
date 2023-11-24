@@ -5,12 +5,12 @@ bonjour1.textContent = ('Bienvenue ' + prenomBjr );
 bonjour1.style.fontStyle = 'lighter';
 bonjour1.style.color = "grey";
 
-let dateJour = new Date ();
-let bonjour2 = document.getElementById('bonjour2');
+// let dateJour = new Date ();
+// let bonjour2 = document.getElementById('bonjour2');
 
-bonjour2.textContent = ('Nous sommes le ' + dateJour.toLocaleDateString("fr"));
-bonjour2.style.fontStyle = 'lighter';
-bonjour2.style.color = "grey";
+// bonjour2.textContent = ('Nous sommes le ' + dateJour.toLocaleDateString("fr"));
+// bonjour2.style.fontStyle = 'lighter';
+// bonjour2.style.color = "grey";
 
 let dateCo = new Date();
 let heures = dateCo.getHours();

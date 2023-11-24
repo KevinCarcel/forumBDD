@@ -13,7 +13,7 @@ require_once "../includes/head.php" ?>
       <h1>S'ENREGISTRER</h1>
     </div>
     <!-- Debut Form -->
-    <form action="../controller/enregistrer_controller.php" id="formulaireEnregistrer" method="POST"
+    <form action="../controller/enregistrer_controller.php" class="form" id="formulaireEnregistrer" method="POST"
       enctype="multipart/form-data">
       <img src="../image/bg1.jpg" alt="bg1" class="imgForm">
       <?php

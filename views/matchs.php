@@ -5,15 +5,42 @@ require_once "../includes/head.php" ?>
   <!-- DEBUT HEADER -->
   <?php
 require_once "../includes/header.php" ?>
+  <?php require_once "../controller/forum_controller.php" ?>
 
 
   <main class="mainSujet">
     <main class="mainForum">
       <div class="bonjour">
-        <p id="bonjour1"></p>
-        <p id="bonjour2"></p>
-        <p id="bonjour3"></p>
+
+        <?php
+      echo "<p id='bonjour1'>$bjr1</p>";
+    ?>
+        <?php
+      $date = new DateTime();
+      $dateJour = "Nous sommes le ". $date->format("d/m/Y") ."";
+      $_SESSION["dateJour"] = $dateJour;
+    echo "<p id='bonjour2'>$dateJour</p>";
+    ?>
+
+        <?php
+      date_default_timezone_set("Europe/Paris");
+      $date = new DateTime();
+      $heureJour = "Vous vous êtes connectés à : ". $date->format("H:i:s") ."";
+      $_SESSION["heureJour"] = $heureJour;
+    echo "<p id='bonjour3'>$heureJour</p>";
+    ?>
       </div>
+      <form method="POST">
+        <input type="submit" name="deco" value="Deconnexion" class="button" id="deco"> <!-- Bouton de déconnexion -->
+      </form>
+      <?php
+  
+if (isset($_POST['deco'])) {
+    session_destroy();
+    header('location:../accueil.php');
+     
+}
+?>
       <div class="titre">
         <h1 class="h1Modif">MATCHS</h1>
       </div>

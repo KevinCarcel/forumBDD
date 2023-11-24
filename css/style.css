@@ -159,7 +159,7 @@ border: solid 2px white;
 }
 
 /* Page Enregistrer */
-form{
+.form{
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -338,6 +338,10 @@ input{
   display: flex;
   flex-direction: column;
 }
+#bonjour1,#bonjour2,#bonjour3{
+  color: grey;
+  font-weight: lighter;
+}
 
 /* PAGE SUJETS */
 .fullSujet{
@@ -493,7 +497,7 @@ h1{
 }
 /* FIN ACCUEIL */
 /* ENREGISTRER */
-form{
+.form{
   margin-left: 5%;
   margin-right: 5%;
 }

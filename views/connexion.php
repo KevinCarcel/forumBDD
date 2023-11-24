@@ -12,7 +12,7 @@ require_once "../includes/head.php" ?>
       <h1>SE CONNECTER</h1>
     </div>
 
-    <form action="../controller/connexion_controller.php" id="formulaireConnexion" method="POST">
+    <form action="../controller/connexion_controller.php" id="formulaireConnexion" class="form" method="POST">
       <?php
             if ($_SESSION['success2'] == 1) {
                 echo '<p id="success">Tu es déja connecté</p>';
