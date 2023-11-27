@@ -30,17 +30,6 @@ require_once "../includes/header.php" ?>
     ?>
 
     </div>
-    <form method="POST">
-      <input type="submit" name="deco" value="Deconnexion" class="button" id="deco"> <!-- Bouton de déconnexion -->
-    </form>
-    <?php
-  
-if (isset($_POST['deco'])) {
-    session_destroy();
-    header('location:../accueil.php');
-     
-}
-?>
     <div class="titre">
       <h1 class="h1Modif">FORUM</h1>
     </div>

@@ -1,20 +1,14 @@
 <?php
-
-// début de la session pour mettre les indications en cas de réussite ou d'erreur
 session_start();
-
 require_once "../includes/connexiondb.php";
 
 // connexion base de donnée
 $con = connectdb();
 
-//creation requete
-$req = $con->query ('SELECT * FROM utilisateur');
-$donnees = $req ->fetch();
+//Trouvez l'utilisateur connecté
 
-$prenom = $donnees['prenom_User'];
-$nom = $donnees['nom_User'];
+if (isset($_SESSION['utilisateur']) && $_SESSION['utilisateur']==1) {
 
-$bjr1 = 'Bienvenu ' .$prenom." ".$nom;
-
+$bjr1 = 'Bienvenue ' .$_SESSION['prenom']." ".$_SESSION['nom'];
+} 
 ?>

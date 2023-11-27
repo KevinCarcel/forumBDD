@@ -39,6 +39,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $_SESSION['erreur8'] = 0;
             $_SESSION['erreur9'] = 0;
             $_SESSION['success2'] = 1;
+            $_SESSION['utilisateur'] = 1;
+            $_SESSION['idUtilisateur'] = $utilisateurMail['id_User'];
+            $_SESSION['nom'] = $utilisateurMail['nom_User'];
+            $_SESSION['prenom'] = $utilisateurMail['prenom_User'];
+            $_SESSION['mail'] = $utilisateurMail['mail_User'];
+            $_SESSION['image'] = $utilisateurMail['lien_Image'];
+            $_SESSION['dateInscription'] = $utilisateurMail['date_Inscription'];
+            $_SESSION['dateNow'] = new DateTime();
             header('Location:../views/forum.php');
         }
 

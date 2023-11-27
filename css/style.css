@@ -389,6 +389,13 @@ td{
   text-decoration: none;
   color: black;
 }
+.lienTablo{
+  text-decoration: none;
+  color: black;
+}
+.lienTablo:hover{
+  color: red;
+}
 
 /* PAGE SUJET */
 #sujetName{
@@ -548,6 +555,7 @@ td{
   align-items: center;
   gap: 20px;
 }
+
 /* SUJETS JOUEURS */
 .fullBoxCom{
   width: 100%;

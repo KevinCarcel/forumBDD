@@ -6,7 +6,6 @@ require_once "../includes/head.php" ?>
   <?php
 require_once "../includes/header.php" ?>
   <?php require_once "../controller/addsujet.php";?>
-  <?php require_once "../controller/forum_controller.php" ?>
 
 
   <main class="mainSujet">
@@ -14,6 +13,10 @@ require_once "../includes/header.php" ?>
       <div class="bonjour">
 
         <?php
+        if (isset($_SESSION['utilisateur']) && $_SESSION['utilisateur']==1) {
+
+          $bjr1 = 'Bienvenue ' .$_SESSION['prenom']." ".$_SESSION['nom'];
+          } 
       echo "<p id='bonjour1'>$bjr1</p>";
     ?>
         <?php
@@ -31,17 +34,6 @@ require_once "../includes/header.php" ?>
     echo "<p id='bonjour3'>$heureJour</p>";
     ?>
       </div>
-      <form method="POST">
-        <input type="submit" name="deco" value="Deconnexion" class="button" id="deco"> <!-- Bouton de déconnexion -->
-      </form>
-      <?php
-  
-if (isset($_POST['deco'])) {
-    session_destroy();
-    header('location:../accueil.php');
-     
-}
-?>
       <div class="titre">
         <h1 class="h1Modif">JOUEURS</h1>
       </div>
@@ -62,19 +54,18 @@ if (isset($_POST['deco'])) {
      //boucles foreach pour afficher chaque ligne de la requete 
      foreach($lignes as $ligne){
       echo '<tr>
-      <td>'.$ligne['id_Sujet'].'</td>
-      <td>'.$ligne['nom_Sujet'].'</td>
-      <td>'.$ligne[$dateNow].'</td>
-      <td>'.$ligne['prenom_User '.'nom_User'].'</td>
-      <td><a href="addsujet.php? id='.$ligne['id_Sujet'].'"></a></td>
+      <td class="caseTablo">'.$ligne['id_Sujet'].'</td>
+      <td class="caseTablo"><a href="../views/sujetJoueurs.php" class="lienTablo">'.$ligne['nom_Sujet'].'</a></td>
+      <td class="caseTablo">'.$ligne['date_Sujet'].'</td>
+      <td class="caseTablo">'.$ligne['prenom_User'].' '.$ligne["nom_User"].'</td>
     </tr>';
      }
     ?>
 
             <div class="addSujet">
-              <form action="../controller/addsujet.php" method="POST">
-                < <input type="text" class="fieldAdd" name="addSujet" id="fieldAdd" placeholder="Ajoutez un sujet">
-                  <input type="submit" value="Ajouter" id="submit" class="button">
+              <form method="post">
+                <input type="text" class="fieldAdd" name="addSujet" id="fieldAdd" placeholder="Ajoutez un sujet">
+                <input type="submit" value="Ajouter" id="submit" class="button">
               </form>
             </div>
           </table>
